@@ -27,5 +27,6 @@ public class FragmentAppBar extends MvcFragment {
     public void onViewReady(View view, Bundle savedInstanceState, Reason reason) {
         super.onViewReady(view, savedInstanceState, reason);
         ButterKnife.bind(this, view);
+        toolbar.setTitle(R.string.app_custom_name);
     }
 }

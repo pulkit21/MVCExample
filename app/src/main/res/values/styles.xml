@@ -10,4 +10,8 @@
         <item name="colorControlHighlight">@color/colorHighlight</item>
     </style>
 
+    <style name="MyCustomToolBar" parent="ThemeOverlay.AppCompat.Dark">
+        <item name="android:textColorSecondary">@color/colorSecondary</item>
+    </style>
+
 </resources>
