@@ -26,6 +26,7 @@ public class FragmentA extends MvcFragment {
             FragmentAppBar fragmentAppBar = new FragmentAppBar();
             getChildFragmentManager().beginTransaction().replace(R.id.fragment_appBarContainer, fragmentAppBar).commit();
 
+
         }
 
 

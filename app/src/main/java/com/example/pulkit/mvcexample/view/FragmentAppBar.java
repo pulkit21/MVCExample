@@ -10,9 +10,7 @@ import com.shipdream.lib.android.mvc.view.MvcFragment;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-/**
- * Created by pulkit on 9/29/15.
- */
+
 public class FragmentAppBar extends MvcFragment {
 
     @Bind(R.id.mvcAppBar)

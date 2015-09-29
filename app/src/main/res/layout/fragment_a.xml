@@ -1,17 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/fragment_appBarContainer"/>
 
-    <TextView
-        android:id="@+id/helloWord"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="20dp"
-        android:text="Hello"/>
+    <android.support.v4.widget.DrawerLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/drawer_layout">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/fragment_appBarContainer"/>
+
+
+        <fragment
+            android:id="@+id/fragmentNavDrawer"
+            android:layout_width="280dp"
+            android:layout_gravity="start"
+            android:layout_height="match_parent"
+            android:layout="@layout/fragment_nav_drawer"
+            android:name="com.example.pulkit.mvcexample.view.FragmentNavDrawer"
+            tools:layout="@layout/fragment_nav_drawer">
+
+        </fragment>
+    </android.support.v4.widget.DrawerLayout>
+
+
 </LinearLayout>
