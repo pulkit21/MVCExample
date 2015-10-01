@@ -1,30 +1,24 @@
 package com.example.pulkit.mvcexample.view;
 
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import com.example.pulkit.mvcexample.R;
+import com.example.pulkit.mvcexample.event.ChangeTitleEvent;
 import com.shipdream.lib.android.mvc.view.MvcFragment;
 
-import butterknife.Bind;
-import butterknife.ButterKnife;
-
-
-public class FragmentAppBar extends MvcFragment {
-
-    @Bind(R.id.mvcAppBar)
-    Toolbar toolbar;
-
+/**
+ * Created by pulkit on 9/30/15.
+ */
+public class FragmentB extends MvcFragment {
     @Override
     protected int getLayoutResId() {
-        return R.layout.fragment_app_bar;
+        return R.layout.fragment_b;
     }
 
     @Override
     public void onViewReady(View view, Bundle savedInstanceState, Reason reason) {
         super.onViewReady(view, savedInstanceState, reason);
-        ButterKnife.bind(this, view);
-        toolbar.setTitle(R.string.app_custom_name);
+        postEventV2V(new ChangeTitleEvent(this));
     }
 }
