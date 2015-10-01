@@ -23,10 +23,12 @@ public class MainActivity extends MvcActivity {
     @Override
     protected Class<? extends MvcFragment> mapNavigationFragment(String s) {
         switch (s) {
-            case "LocationA":
+            case "MVCAPP":
                 return FragmentA.class;
-            case "LocationB":
+            case "Uber":
                 return FragmentB.class;
+            case "Posts":
+                return FragmentPost.class;
             default:
                 return null;
         }
@@ -72,7 +74,7 @@ public class MainActivity extends MvcActivity {
 
         @Override
         protected void onStartUp() {
-            getNavigationController().navigateTo(this, "LocationA");
+            getNavigationController().navigateTo(this, "MVCAPP");
         }
 
         public void onEvent(ChangeTitleEvent event) {

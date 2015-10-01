@@ -25,8 +25,11 @@ import butterknife.ButterKnife;
  */
 public class FragmentA extends MvcFragment {
 
-    @Bind(R.id.bGoTo)
-    Button bGoTo;
+    @Bind(R.id.buttonGoToUber)
+    Button buttonGoToUber;
+
+    @Bind(R.id.buttonGoToPost)
+    Button buttonGoToPost;
 
     @Inject
     private NavigationController navigationController;
@@ -36,12 +39,20 @@ public class FragmentA extends MvcFragment {
         super.onViewReady(view, savedInstanceState, reason);
         postEventV2V(new ChangeTitleEvent(this));
         ButterKnife.bind(this, view);
-        bGoTo.setOnClickListener(new View.OnClickListener() {
+        buttonGoToUber.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                navigationController.navigateTo(FragmentA.this, "LocationB");
+                navigationController.navigateTo(this, "Uber");
             }
         });
+
+        buttonGoToPost.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navigationController.navigateTo(this, "Posts");
+            }
+        });
+
     }
 
     @Override
