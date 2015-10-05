@@ -5,7 +5,6 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-
 import com.example.pulkit.mvcexample.R;
 import com.example.pulkit.mvcexample.event.ChangeTitleEvent;
 import com.shipdream.lib.android.mvc.controller.NavigationController;
@@ -19,6 +18,7 @@ import butterknife.ButterKnife;
 
 
 public class MainActivity extends MvcActivity {
+
 
     @Override
     protected Class<? extends MvcFragment> mapNavigationFragment(String s) {
@@ -37,7 +37,6 @@ public class MainActivity extends MvcActivity {
     @Override
     protected Class<? extends DelegateFragment> getDelegateFragmentClass() {
         return ContainerFragment.class;
-
     }
 
     public static class ContainerFragment extends DelegateFragment {
@@ -50,6 +49,8 @@ public class MainActivity extends MvcActivity {
 
         @Bind(R.id.tbMainActionbar)
         Toolbar toolbar;
+
+
 
         @Override
         protected int getLayoutResId() {
@@ -70,7 +71,13 @@ public class MainActivity extends MvcActivity {
             drawerLayout.setDrawerListener(actionBarDrawerToggle);
             actionBarDrawerToggle.setDrawerIndicatorEnabled(true);
             actionBarDrawerToggle.syncState();
+            if (reason == Reason.FIRST_TIME) {
+                FragmentNavDrawer navDrawer = new FragmentNavDrawer();
+                getChildFragmentManager().beginTransaction().replace(R.id.mvc_NavDrawer, navDrawer).commit();
+
+            }
         }
+
 
         @Override
         protected void onStartUp() {
@@ -81,5 +88,4 @@ public class MainActivity extends MvcActivity {
             toolbar.setTitle(navigationController.getModel().getCurrentLocation().getLocationId());
         }
     }
-
 }

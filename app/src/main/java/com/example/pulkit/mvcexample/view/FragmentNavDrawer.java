@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.example.pulkit.mvcexample.R;
+import com.shipdream.lib.android.mvc.view.MvcActivity;
 import com.shipdream.lib.android.mvc.view.MvcFragment;
 
 import butterknife.Bind;
@@ -24,9 +25,14 @@ public class FragmentNavDrawer extends MvcFragment {
         return R.layout.fragment_nav_drawer;
     }
 
+    
+
     @Override
     public void onViewReady(View view, Bundle savedInstanceState, Reason reason) {
         super.onViewReady(view, savedInstanceState, reason);
         ButterKnife.bind(this, view);
+
     }
+
+
 }

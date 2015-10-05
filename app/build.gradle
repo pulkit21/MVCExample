@@ -24,5 +24,14 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.0.1'
     compile "com.shipdream:android-mvc:1.2.0"
     compile 'com.jakewharton:butterknife:7.0.1'
+    //Core
+    compile 'com.github.gabrielemariotti.cards:cardslib-core:2.1.0'
+
+    //Optional for built-in cards
+    compile 'com.github.gabrielemariotti.cards:cardslib-cards:2.1.0'
+
+    //Optional for RecyclerView
+    compile 'com.github.gabrielemariotti.cards:cardslib-recyclerview:2.1.0'
+
 
 }

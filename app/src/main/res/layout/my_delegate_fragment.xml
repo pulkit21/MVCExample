@@ -11,6 +11,7 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <android.support.v7.widget.Toolbar
             android:id="@+id/tbMainActionbar"
             android:layout_width="match_parent"
@@ -30,13 +31,22 @@
 
 
 
-    <fragment
-        android:id="@+id/fragmentNavDrawer"
-        android:layout_width="280dp"
+    <FrameLayout
         android:layout_gravity="start"
-        android:layout_height="match_parent"
-        android:name="com.example.pulkit.mvcexample.view.FragmentNavDrawer"
-        tools:layout="@layout/fragment_nav_drawer">
-    </fragment>
+        tools:layout="@layout/fragment_nav_drawer"
+        android:id="@+id/mvc_NavDrawer"
+        android:layout_width="280dp"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+    <!--<fragment-->
+        <!--android:id="@+id/fragmentNavDrawer"-->
+        <!--android:layout_width="280dp"-->
+        <!--android:layout_gravity="start"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:name="com.example.pulkit.mvcexample.view.FragmentNavDrawer"-->
+        <!--tools:layout="@layout/fragment_nav_drawer">-->
+    <!--</fragment>-->
 
 </android.support.v4.widget.DrawerLayout>

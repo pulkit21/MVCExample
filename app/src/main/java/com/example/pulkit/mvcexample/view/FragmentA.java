@@ -7,6 +7,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.pulkit.mvcexample.R;
 import com.example.pulkit.mvcexample.event.ChangeTitleEvent;
@@ -43,6 +44,7 @@ public class FragmentA extends MvcFragment {
             @Override
             public void onClick(View v) {
                 navigationController.navigateTo(this, "Uber");
+
             }
         });
 
